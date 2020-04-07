@@ -1,0 +1,20 @@
+---
+mapping:
+  model: contact
+  version: 1
+
+data: lead
+
+fields:
+  dob:        birth_date
+  first_name: first_name
+  last_name:  last_name
+
+types:
+  phone_number:
+    model: phone
+    fields:
+      number: phone_number
+      extension:
+      is_primary: ignore
+      type:

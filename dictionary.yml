@@ -1,0 +1,17 @@
+---
+dictionary:
+  model: contact
+  version: 1
+
+fields:
+  birth_date:
+    required: false
+    type:     Field::Date
+
+  first_name:
+    required: true
+    type:     Field::String
+
+  last_name:
+    required: true
+    type:     Field::String

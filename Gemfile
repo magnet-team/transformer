@@ -19,16 +19,17 @@ group :development do
   gem 'guard-markdown'
   gem 'guard-rspec'
   gem 'guard-rubocop'
-end
-
-group :development, :test do
-  gem 'awesome_print'
-  gem 'byebug'
-  gem 'rspec', '~> 3.0'
   gem 'rubocop'
   gem 'rubocop-faker'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
   gem 'rubocop-ordered_methods'
   gem 'rubocop-thread_safety'
+  gem 'yamllint'
+end
+
+group :development, :test do
+  gem 'awesome_print'
+  gem 'byebug'
+  gem 'rspec', '~> 3.0'
 end

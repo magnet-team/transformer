@@ -6,5 +6,5 @@ data:
 
 mapping:
   birth_date: dob
-  first_name:
+  first_name: $.first_name
   last_name:

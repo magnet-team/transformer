@@ -116,9 +116,12 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     to_regexp (0.2.1)
+    trollop (2.9.10)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
+    yamllint (0.0.9)
+      trollop (~> 2)
     zeitwerk (2.3.0)
 
 PLATFORMS
@@ -146,6 +149,7 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-thread_safety
   transformer!
+  yamllint
   zeitwerk
 
 BUNDLED WITH

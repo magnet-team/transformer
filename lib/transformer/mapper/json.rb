@@ -16,16 +16,14 @@ module Transformer
       end
 
       def transform(options = {})
-        mapping.each_with_object({}) do |(target, path), result|
-          if path.nil?
-            path = target
-          end
+        mapping.each_with_object({}) do |(target, json_path), result|
+          transformer =
+            Transformer::Path::Factory.manufacture(
+              json_path: json_path,
+              target:    target
+            )
 
-          if path.match?(/\A[[:alpha:]]/)
-            path = "$.#{path}"
-            result[target] = JsonPath.new(path).first(json)
-            next
-          end
+          result[target] = transformer.transform json: json
         end.deep_symbolize_keys
       end
 

@@ -17,6 +17,10 @@ module Transformer
             include(last_name: 'Streicher')
           )
         end
+
+        it 'ignores root-level keys not specified' do
+          expect(transformer).not_to include(:city)
+        end
       end
     end
   end

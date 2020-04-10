@@ -8,6 +8,7 @@ gemspec
 gem 'activemodel'
 gem 'activesupport'
 gem 'chronic'
+gem 'jsonpath'
 gem 'memery'
 gem 'rake', '~> 12.0'
 gem 'zeitwerk'
@@ -21,6 +22,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'awesome_print'
+  gem 'byebug'
   gem 'rspec', '~> 3.0'
   gem 'rubocop'
   gem 'rubocop-faker'

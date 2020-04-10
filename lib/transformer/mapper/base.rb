@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'jsonpath'
+
 module Transformer
   module Mapper
     class Base
@@ -20,19 +22,6 @@ module Transformer
 
       memoize def mapping_fields
         mapping[:fields]
-      end
-
-      memoize def mapping_types
-        mapping[:types]
-      end
-
-      def root
-        keys = mapping[:data].split(':').map(&:to_sym)
-        attributes.dig(*keys)
-      end
-
-      memoize def types
-        mapping_types.keys
       end
 
       attr_reader :attributes, :dictionary, :mapping

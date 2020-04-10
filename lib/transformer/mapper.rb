@@ -1,11 +1,6 @@
-# frozen-string-literal: true
-
-require 'transformer/version'
-require 'zeitwerk'
-
-loader = Zeitwerk::Loader.for_gem
-loader.setup # ready!
+# frozen_string_literal: true
 
 module Transformer
-  class Error < StandardError; end
+  module Mapper
+  end
 end

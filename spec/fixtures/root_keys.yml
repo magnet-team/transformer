@@ -1,0 +1,10 @@
+data:
+  dob:       'June 1, 1964'
+  first_name: Martin
+  last_name:  Streicher
+  city:       Raleigh
+
+mapping:
+  birth_date: dob
+  first_name:
+  last_name:

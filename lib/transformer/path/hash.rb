@@ -2,18 +2,15 @@
 
 module Transformer
   module Path
-    class Base
+    class Hash < Base
       def initialize(json_path:)
-        @json_path = json_path.to_s
+        @json_path = json_path
       end
 
       def transform(json)
-        raise 'Transform method not implemented'
+        JsonPathExpression.new(json_path).transform(json).first
+        JsonPath.new(json_path).first(json)
       end
-
-      private
-
-      attr_reader :json, :json_path
     end
   end
 end

@@ -3,17 +3,22 @@
 module Transformer
   module Path
     class Factory
-      def self.manufacture(json_path:, target: nil)
-        new(json_path: json_path, target: target).manufacture
+      def self.manufacture(json_path:, root: nil, target: nil)
+        new(json_path: json_path, root: root, target: target).manufacture
       end
 
-      def initialize(json_path:, target: nil)
+      def initialize(json_path:, root: nil, target: nil)
         @json_path = json_path
+        @root      = root
         @target    = target
       end
 
       def manufacture
+        byebug
         return Root.new(json_path: target) if json_path.nil?
+
+        return Hash.new(json_path: json_path) if json_path.is_a?(Hash)
+        return List.new(json_path: json_path) if json_path.is_a?(Array)
         return Root.new(json_path: json_path) if json_path.match?(/\A(\$\.)?[[:alpha:]_\-]+\z/)
       end
 

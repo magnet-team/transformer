@@ -3,9 +3,12 @@
 module Transformer
   module Path
     class Root < Base
-      def transform(json:)
-        path = "$.#{path}" unless json_path.match?(/\A\$\./)
-        JsonPath.new(json_path).first(json)
+      def [](json)
+        JsonPathExpression.new(json_path: json_path)[json]
+      end
+
+      def transform(json)
+        JsonPathExpression.new(json_path: json_path).transform(json: json)
       end
     end
   end

@@ -22,7 +22,7 @@ module Transformer
         end
 
         return Map.new(mapping: mapping, path: path) if mapping.is_a?(Hash)
-#         # return List.new(json_path: json_path) if json_path.is_a?(Array)
+        return Collection.new(mapping: mapping, path: path) if mapping.is_a?(Array)
       end
 
       private

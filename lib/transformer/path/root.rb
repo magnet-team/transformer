@@ -8,6 +8,7 @@ module Transformer
       end
 
       def transform(json)
+        byebug
         self[json].first
       end
     end

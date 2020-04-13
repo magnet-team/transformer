@@ -8,9 +8,11 @@ data:
     keyc:
       nodec: 'C'
 
-  # emails:
-  #   - email: 'jon@doe.com'
-  #     type:  work
+  emails:
+    - email: 'jon@doe.com'
+      type:  work
+    - email: 'jane@doe.com'
+      type:  home
 
   first_name: Martin
   last_name:  Streicher
@@ -27,9 +29,10 @@ mapping:
       source: keyc
       node_charlie: nodec
 
-    # emails:
-    #   - email_address: email
-    #     type:
+  email_addresses:
+    - source: emails
+      email_address: email
+      type:
 
   first_name: $.first_name
   last_name:

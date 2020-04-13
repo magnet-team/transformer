@@ -3,10 +3,10 @@
 module Transformer
   module Mapper
     class Json < Base
+      JSON_PATH_ROOT = '$'
+
       include ActiveModel::Validations
       include Memery
-
-      JSON_PATH_ROOT = '$'
 
       def self.transform(json:, mapping:, path: JSON_PATH_ROOT)
         new(json: json, mapping: mapping, path: path).transform

@@ -3,8 +3,9 @@
 module Transformer
   module Path
     class Base
-      def initialize(json_path:)
-        @json_path = json_path.to_s
+      def initialize(mapping: {}, path:)
+        @path    = path
+        @mapping = mapping
       end
 
       def transform(json)
@@ -13,7 +14,7 @@ module Transformer
 
       private
 
-      attr_reader :json, :json_path
+      attr_reader :mapping, :path
     end
   end
 end

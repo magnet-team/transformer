@@ -4,11 +4,11 @@ module Transformer
   module Path
     class Root < Base
       def [](json)
-        JsonPathExpression.new(json_path: json_path)[json]
+        JsonPathExpression.new(path: path)[json]
       end
 
       def transform(json)
-        JsonPathExpression.new(json_path: json_path).transform(json: json)
+        self[json].first
       end
     end
   end

@@ -6,35 +6,35 @@ module Transformer
       include ActiveModel::Validations
       include Memery
 
-      def self.transform(json:, mapping:, root: '$')
-        new(json: json, mapping: mapping, root: root).transform
+      def self.transform(json:, mapping:, path: '$')
+        new(json: json, mapping: mapping, path: path).transform
       end
 
-      def initialize(json:, mapping:, root: '$')
+      def initialize(json:, mapping:, path: '$')
         @json    = json
         @mapping = mapping.deep_stringify_keys
-        @root    = root
+        @path    = path
       end
 
       def transform(options = {})
         data =
-          mapping.each_with_object({}) do |(target, json_path), result|
+          mapping.each_with_object({}) do |(target, object), result|
             transformer =
               Transformer::Path::Factory.manufacture(
-                json_path: json_path,
-                root:      root,
-                target:    target
+                mapping: object,
+                path:    path,
+                target:  target
               )
 
-            result[target] = transformer.transform json: json
+            result[target] = transformer.transform json
           end
 
-        data.deep_symbolize_keys
+        data.deep_symbolize_keys.tap { |x| ap x }
       end
 
       private
 
-      attr_reader :json, :mapping, :root
+      attr_reader :json, :mapping, :path
     end
   end
 end

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/martinstreicher/yamllint.git
+  revision: d1ce01aeef03df7daf8017fc3fa3ad988ec3af1a
+  branch: master
+  specs:
+    yamllint (0.0.9)
+      optimist
+
 PATH
   remote: .
   specs:
@@ -67,10 +75,11 @@ GEM
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    optimist (3.0.0)
     parallel (1.19.1)
     parser (2.7.1.0)
       ast (~> 2.4.0)
-    pry (0.13.0)
+    pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
     rainbow (3.0.0)
@@ -116,12 +125,9 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     to_regexp (0.2.1)
-    trollop (2.9.10)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
-    yamllint (0.0.9)
-      trollop (~> 2)
     zeitwerk (2.3.0)
 
 PLATFORMS
@@ -140,6 +146,7 @@ DEPENDENCIES
   guard-rubocop
   jsonpath
   memery
+  optimist
   rake (~> 12.0)
   rspec (~> 3.0)
   rubocop
@@ -149,7 +156,7 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-thread_safety
   transformer!
-  yamllint
+  yamllint!
   zeitwerk
 
 BUNDLED WITH

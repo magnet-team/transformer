@@ -2,23 +2,34 @@ data:
   city:       Raleigh
   dob:       'June 1, 1964'
 
-  emails:
-    - email: 'jon@doe.com'
-      type:  work
+  data_nested_hash:
+    keya: 'A'
+    keyb: 'B'
+    keyc:
+      nodec: 'C'
+
+  # emails:
+  #   - email: 'jon@doe.com'
+  #     type:  work
 
   first_name: Martin
   last_name:  Streicher
 
 mapping:
-  birth_date: $.dob
+  birth_date: dob
 
-  email_addresses:
-    personal: 
-    business:
+  nested_hash:
+    source: data_nested_hash
+    key_alpha: keya
+    key_beta: keyb
 
-    emails:
-      - email_address: email
-        type:
+    key_gamma:
+      source: keyc
+      node_charlie: nodec
+
+    # emails:
+    #   - email_address: email
+    #     type:
 
   first_name: $.first_name
   last_name:

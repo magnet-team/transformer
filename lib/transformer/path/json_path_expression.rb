@@ -14,9 +14,9 @@ module Transformer
       private
 
       def evaluate_path
-        path = json_path
-        path = "$.#{path}" unless path.match?(/\A\$\./)
-        JsonPath.new(path)
+        modified_path = path
+        modified_path = "$.#{modified_path}" unless modified_path.match?(/\A\$\./)
+        JsonPath.new(modified_path)
       end
     end
   end

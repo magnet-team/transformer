@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 # Specify your gem's dependencies in transformer.gemspec
 gemspec
 
@@ -10,6 +12,7 @@ gem 'activesupport'
 gem 'chronic'
 gem 'jsonpath'
 gem 'memery'
+gem 'optimist'
 gem 'rake', '~> 12.0'
 gem 'zeitwerk'
 
@@ -25,7 +28,7 @@ group :development do
   gem 'rubocop-rspec'
   gem 'rubocop-ordered_methods'
   gem 'rubocop-thread_safety'
-  gem 'yamllint'
+  gem 'yamllint', github: 'martinstreicher/yamllint', branch: 'master'
 end
 
 group :development, :test do

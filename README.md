@@ -1,3 +1,5 @@
+![Ruby](https://github.com/magnet-team/transformer/workflows/Ruby/badge.svg?branch=master&event=check_run)
+
 # Transformer
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/transformer`. To experiment with that code, run `bin/console` for an interactive prompt.

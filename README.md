@@ -1,4 +1,4 @@
-![Ruby](https://github.com/magnet-team/transformer/workflows/Ruby/badge.svg?branch=master&event=check_run)
+![RSpec](https://github.com/magnet-team/transformer/.github/workflows/rspec.yml/badge.svg)
 
 # Transformer
 

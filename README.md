@@ -1,4 +1,4 @@
-![RSpec](https://github.com/magnet-team/transformer/.github/workflows/rspec.yml/badge.svg)
+![RSpec](https://github.com/magnet-team/transformer/.github/workflows/rspec/badge.svg)
 
 # Transformer
 

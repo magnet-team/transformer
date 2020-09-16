@@ -19,7 +19,6 @@ gem 'zeitwerk'
 group :development do
   gem 'guard'
   gem 'guard-bundler'
-  gem 'guard-markdown'
   gem 'guard-rspec'
   gem 'guard-rubocop'
   gem 'rubocop'

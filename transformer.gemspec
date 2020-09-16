@@ -12,6 +12,21 @@ Gem::Specification.new do |spec|
         .reject { |f| f.match(%r{^(test|spec|features)/}) }
     end
 
+  spec.add_development_dependency 'awesome_print'
+  spec.add_development_dependency 'byebug'
+  spec.add_development_dependency 'guard-bundler'
+  spec.add_development_dependency 'guard-rspec'
+  spec.add_development_dependency 'guard-rubocop'
+  spec.add_development_dependency 'guard'
+  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rubocop-faker'
+  spec.add_development_dependency 'rubocop-ordered_methods'
+  spec.add_development_dependency 'rubocop-performance'
+  spec.add_development_dependency 'rubocop-rspec'
+  spec.add_development_dependency 'rubocop-thread_safety'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'yamllint', github: 'martinstreicher/yamllint', branch: 'master'
+
   spec.add_runtime_dependency 'activemodel', '>= 6.0'
   spec.add_runtime_dependency 'activesupport', '>= 6.0'
   spec.add_runtime_dependency 'chronic'

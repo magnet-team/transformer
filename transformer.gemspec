@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-rspec'
   spec.add_development_dependency 'rubocop-thread_safety'
   spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'yamllint', github: 'martinstreicher/yamllint', branch: 'master'
+  spec.add_development_dependency 'yamllint'
 
   spec.add_runtime_dependency 'activemodel', '>= 6.0'
   spec.add_runtime_dependency 'activesupport', '>= 6.0'

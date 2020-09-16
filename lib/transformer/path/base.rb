@@ -3,12 +3,12 @@
 module Transformer
   module Path
     class Base
-      def initialize(mapping: {}, path:)
+      def initialize(path:, mapping: {})
         @path    = path
         @mapping = mapping
       end
 
-      def transform(json)
+      def transform(_json)
         raise 'Transform method not implemented'
       end
 

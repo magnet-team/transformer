@@ -9,7 +9,7 @@ module Transformer
         updated_path     = "#{path}.#{source}"
 
         modified_mapping.each_with_object({}) do |(key, value), result|
-          transformer   = Factory.manufacture(mapping: value, path: updated_path)
+          transformer = Factory.manufacture(mapping: value, path: updated_path)
           result[key] = transformer.transform(json)
         end
       end

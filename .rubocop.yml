@@ -2,15 +2,13 @@ require:
   - rubocop-faker
   - rubocop-ordered_methods
   - rubocop-performance
-  - rubocop-rails
   - rubocop-rspec
   - rubocop-thread_safety
 
 AllCops:
   Exclude:
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'node_modules/**/*'
+    - "transformer.gemspec"
+  NewCops: enable
   TargetRubyVersion: 2.7.0
 
 Layout/HashAlignment:
@@ -38,19 +36,10 @@ Layout/MultilineMethodArgumentLineBreaks:
 Metrics/BlockLength:
   Exclude:
     - Guardfile
-    - 'spec/**/*spec.rb'
+    - "spec/**/*spec.rb"
 
 Metrics/MethodLength:
   Max: 20
-
-Rails:
-  Enabled: true
-
-Rails/HttpPositionalArguments:
-  Exclude:
-
-Rails/SkipsModelValidations:
-  Enabled: false
 
 RSpec/EmptyExampleGroup:
   Enabled: false

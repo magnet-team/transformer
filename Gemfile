@@ -24,9 +24,9 @@ group :development do
   gem 'guard-rubocop'
   gem 'rubocop'
   gem 'rubocop-faker'
+  gem 'rubocop-ordered_methods'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
-  gem 'rubocop-ordered_methods'
   gem 'rubocop-thread_safety'
   gem 'yamllint', github: 'martinstreicher/yamllint', branch: 'master'
 end
